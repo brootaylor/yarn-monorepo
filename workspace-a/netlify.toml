@@ -1,0 +1,33 @@
+##############################
+# Build settings
+##############################
+
+[build]
+  # COMMENTED 'command' AND 'publish' for now cause Netlfy UI handling these.
+  command = "echo 'Ok, let us begin building workspace-a!' && yarn workspace-a && echo 'Build finished, workspace-b deployed 🚀'"
+  publish = "dist"
+
+  # Default site wide settings
+  # https://docs.netlify.com/configure-builds/file-based-configuration/#post-processing
+  # If skip_processing = true, all other settings are ignored
+  [build.processing]
+    skip_processing = false
+  [build.processing.html]
+    pretty_urls = true
+  [build.processing.css]
+    bundle = false
+    minify = false
+  [build.processing.js]
+    bundle = false
+    minify = false
+  [build.processing.images]
+    compress = true
+
+# Build and deployment config for `production` environment
+[context.production]
+  # command = "npm run deploy:build"
+  [context.production.environment]
+    GIT_LFS_ENABLED = "true"
+    NODE_ENV = "production"
+    NODE_VERSION = "14"
+    TZ = "Europe/London"
