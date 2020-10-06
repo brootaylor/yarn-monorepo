@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "clean": "rimraf dist && mkdir dist",
-    "prebuild": "npm run clean && echo 'Getting rid of old stuff first 🔥'",
+    "prebuild": "npm run clean && echo 'Getting rid of old workspace A stuff first 🔥'",
     "build": "echo 'Building workspace A'"
   },
   "dependencies": {
