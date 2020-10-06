@@ -4,7 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "clean": "rimraf www && mkdir www",
+    "clean": "rimraf dist && mkdir dist",
     "prebuild": "npm run clean && echo 'Getting rid of old stuff first 🔥'",
     "build": "echo 'Building workspace A'"
   },
