@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "workspace-a": "yarn --cwd workspace-a build",
+    "workspace-a:dev": "yarn --cwd workspace-a dev",
     "workspace-b": "yarn --cwd workspace-b build"
   }
 }

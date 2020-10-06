@@ -1,4 +1,10 @@
+// Local server
+const browserSync = require('../config/browser-sync.config.js');
+
 module.exports = function(eleventy) {
+
+  // BrowserSync
+  eleventy.setBrowserSyncConfig(browserSync);
 
   // Enable data deep merge
   eleventy.setDataDeepMerge(true);
