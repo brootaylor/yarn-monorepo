@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist && mkdir dist",
     "prebuild": "npm run clean && echo 'Getting rid of old workspace A stuff first 🔥'",
-    "build": "echo 'Building workspace A'"
+    "build": "eleventy && echo 'Building workspace A'"
   },
   "dependencies": {
     "@yarn-monorepo/global": "1.0.0"
