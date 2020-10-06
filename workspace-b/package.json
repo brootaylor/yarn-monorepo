@@ -1,0 +1,14 @@
+{
+  "name": "@yarn-monorepo/workspace-b",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf www && mkdir www",
+    "prebuild": "npm run clean && echo 'Getting rid of old stuff first 🔥'",
+    "build": "echo 'Building workspace B'"
+  },
+  "dependencies": {
+    "@yarn-monorepo/global": "1.0.0"
+  }
+}

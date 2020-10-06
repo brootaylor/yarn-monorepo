@@ -1,0 +1,15 @@
+{
+  "name": "yarn-monorepo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "workspace-a",
+    "workspace-b",
+    "packages/*"
+  ],
+  "scripts": {
+    "workspace-a": "yarn --cwd workspace-a build",
+    "workspace-b": "yarn --cwd workspace-b build"
+  }
+}
