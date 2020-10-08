@@ -6,7 +6,9 @@
   "scripts": {
     "clean": "rimraf dist && mkdir dist",
     "prebuild": "npm run clean && echo 'Getting rid of old workspace A stuff first 🔥'",
-    "build": "eleventy && echo 'Building workspace A'",
+    "sass": "node-sass --output-style uncompressed --source-map true -o dist/styles src/styles",
+    "postcss": "postcss --map --no-map -r dist/styles/*.css --config ../config/postcss.config.js",
+    "build": "npm run sass && npm run postcss && eleventy && echo 'Building workspace A'",
     "dev": "eleventy --serve"
   },
   "dependencies": {
